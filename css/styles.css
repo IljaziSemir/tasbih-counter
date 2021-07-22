@@ -1,0 +1,36 @@
+body {
+    background-image: url(/source/images/coranFlou.jpg);
+    background-repeat: no-repeat;
+    background-size: auto
+}
+
+#tasbihCompteur {
+    padding-top: 50px;
+    margin: auto;
+    height: 500px; 
+    width: 500px;
+    cursor: pointer;
+}
+
+#tasbih:active {
+    height: 520px;
+    width: 520px;
+}
+
+.tasbihSpaceActive{  
+    height: 520px;
+    width: 520px;
+}
+   
+#compteur {
+    font-size: 60px; 
+    font-family: 'Lemonada';
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+@font-face {
+    font-family: 'Lemonada';
+    src: url(/source/Lemonada/lemonada.ttf) format('truetype');
+}

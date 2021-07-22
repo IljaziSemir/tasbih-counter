@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="source/images/tasbih.png">
+    <meta name="viewport" content="width=device-width" />
+    <title>Compteur Tasbih</title>
+</head>
+<body>
+    <div id="tasbihCompteur">
+        <img src="source/images/tasbih.png" alt="tasbih" id="tasbih" title="Cliquez sur le tasbih">
+    </div>
+        <div id="compteur">0</div>
+    <script>
+        const tasbih = document.querySelector('#tasbih');
+        const compteur = document.querySelector('#compteur');
+        let cpt = 0;
+
+        tasbih.addEventListener("click",  () => {
+            cpt ++;
+            compteur.innerHTML = cpt
+        });
+
+        document.body.onkeyup = (e) => {
+            if(e.keyCode == 32){
+                tasbih.setAttribute("class", "tasbihSpaceActive") 
+                cpt ++;
+                compteur.innerHTML = cpt         
+            } 
+            setTimeout (() => {
+                tasbih.removeAttribute("class")  
+            }, 100);
+        } 
+    </script>   
+</body>
+</html>
